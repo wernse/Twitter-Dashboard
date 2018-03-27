@@ -1,0 +1,26 @@
+.twitter {
+  &_card {
+    display: flex;
+    margin: 20px;
+    background-color: white;
+    width: 260px;
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_meta {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+  }
+}
+
+.dashboard {
+  &_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

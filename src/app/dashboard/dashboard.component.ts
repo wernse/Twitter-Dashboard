@@ -7,8 +7,9 @@ import { DataService } from "../../providers/data/data.service";
   styleUrls: ["./dashboard.component.scss"]
 })
 export class DashboardComponent implements OnInit {
-  public search = "bitcoun";
+  public search = "bitcoin";
   public count = 10;
+  public tweets;
   public error;
 
   constructor(public dataService: DataService) {}
@@ -19,8 +20,8 @@ export class DashboardComponent implements OnInit {
 
   getTwitterData(search: string, count: number) {
     this.dataService.getTwitterData(search, count).subscribe(
-      data => {
-        console.log("data", data);
+      tweets => {
+        this.tweets = tweets;
       },
       error => {
         this.error = error.message;
