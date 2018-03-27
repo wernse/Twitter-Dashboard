@@ -9,9 +9,15 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 
 import { DataService } from "../providers/data/data.service";
+import { TweetDisplayComponent } from "./tweet-display/tweet-display.component";
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    NavbarComponent,
+    TweetDisplayComponent
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

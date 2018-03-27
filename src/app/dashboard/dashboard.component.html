@@ -1,17 +1,5 @@
 <section class="dashboard_container">
-  <mat-card class="twitter_card" *ngFor="let tweet of tweets">
-    <mat-card-content class="twitter_content">
-      <div>
-        {{tweet.text}}
-      </div>
-      <div class="twitter_meta">
-        <a [href]="'https://twitter.com/i/web/status/'+tweet.id" target="_blank">
-          <img width="20" height="20" src="/assets/images/twitter-logo.png">
-        </a>
-        <div>{{tweet.created_at| date:'dd MMM HH:mm a'}}</div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+  <app-tweet-display class="dashboard_item" *ngFor="let tweet of tweets" [tweet]="tweet"></app-tweet-display>
 </section>
 
 <section>
