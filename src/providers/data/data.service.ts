@@ -12,11 +12,6 @@ export class DataService {
     let params = new HttpParams();
     params = params.set("search", search);
     params = params.set("count", count.toString());
-    console.log("this.baseUrl", this.baseUrl);
-    console.log(
-      "`${this.baseUrl}/getTwitterData`",
-      `${this.baseUrl}/getTwitterData`
-    );
     return this.http.get(`${this.baseUrl}/getTwitterData`, { params: params });
   }
 }

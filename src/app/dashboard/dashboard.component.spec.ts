@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { DataDisplayModule } from "../data-display/data-display.module";
 
 import { DashboardComponent } from "./dashboard.component";
 import { DataService } from "../../providers/data/data.service";
@@ -12,7 +13,7 @@ describe("DashboardComponent", () => {
       TestBed.configureTestingModule({
         declarations: [DashboardComponent],
         providers: [DataService],
-        imports: [HttpClientModule]
+        imports: [HttpClientModule, DataDisplayModule]
       }).compileComponents();
     })
   );

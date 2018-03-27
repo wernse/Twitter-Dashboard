@@ -1,4 +1,5 @@
-<mat-card class="twitter_card">
+<mat-card class="twitter_card"
+    *ngIf="tweet">
     <mat-card-content class="twitter_content">
         <div>
             {{tweet.text}}
