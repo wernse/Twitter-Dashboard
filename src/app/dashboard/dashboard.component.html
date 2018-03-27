@@ -1,6 +1,11 @@
-<p>
-  dashboard works!
-</p>
-<div>
-  {{error}}
-</div>
+<section class="dashboard_container">
+    <app-tweet-display class="dashboard_item"
+        *ngFor="let tweet of tweets"
+        [tweet]="tweet"></app-tweet-display>
+</section>
+
+<section>
+    <div>
+        {{error}}
+    </div>
+</section>
